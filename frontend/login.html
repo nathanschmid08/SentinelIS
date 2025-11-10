@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Link for Remix Icons-->
+    <link href="https://unpkg.com/remixicon/fonts/remixicon.css" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
@@ -8,13 +11,13 @@
 <body>
     <h2>Login</h2>
     <form action="/login" method="post">
-        <label for="company">Company</label>
+        <label for="company"><i class="ri-building-fill"></i> Company</label>
         <input type="text" id="company" name="company" required>
 
-        <label for="username">Username</label>
+        <label for="username"><i class="ri-user-3-fill"></i> Username</label>
         <input type="text" id="username" name="username" required>
         
-        <label for="password">Password</label>
+        <label for="password"><i class="ri-lock-password-fill"></i> Password</label>
         <input type="password" id="password" name="password" required>
         
         <button type="submit">Login</button>
