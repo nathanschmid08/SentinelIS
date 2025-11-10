@@ -1,12 +1,18 @@
-# Test
+# SentinelIS
+
+Sentinel = Guard
+IS = Information Security
 
 ## Folder Structure
 ```yaml
 Test
 │
-├─ databse/              
-│   ├─ company.sql         
-│   └─ user.sql
+├─ database/
+│   ├─ testing/
+│   │   └─ inserts.sql              
+│   ├─ company.sql 
+│   ├─ user-preferences.sql         
+│   └─ users.sql
 │
 ├─ docker/     
 │   ├─ .env         
