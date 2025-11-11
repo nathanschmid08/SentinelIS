@@ -9,7 +9,7 @@ SentinelIS
 │
 ├─ database/
 │   ├─ chat/
-│   │   ├─ querys
+│   │   ├─ querys/
 │   │   │   └─ query.sql              
 │   │   ├─ conversation.sql 
 │   │   ├─ conversation-participants.sql
@@ -24,7 +24,9 @@ SentinelIS
 │   ├─ .env         
 │   └─ docker-compose.yaml         
 │
-├─ frontend/             
+├─ frontend/
+│   ├─ CSS/
+│   │   └─ style-guide.md
 │   ├─ styles/
 │   │   └─ login.css
 │   ├─ dashboard.html
