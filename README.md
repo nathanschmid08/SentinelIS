@@ -37,6 +37,9 @@ SentinelIS
 ├─ frontend/
 │   ├─ CSS/
 │   │   └─ style-guide.md
+│   ├─ icons/
+│   │   ├─ icon.svg
+│   │   └─ logo.svg
 │   ├─ styles/
 │   │   └─ login.css
 │   ├─ dashboard.html
