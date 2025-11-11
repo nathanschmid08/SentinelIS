@@ -7,6 +7,9 @@ IS = Information Security
 ```yaml
 SentinelIS
 │
+├─ backend/
+│   └─ ConnectDB.java
+│
 ├─ database/
 │   ├─ chat/
 │   │   ├─ querys/
@@ -49,6 +52,7 @@ SentinelIS
 - JavaScript
 
 ### Backend
+- Java
 - Docker
 
 ### Database
