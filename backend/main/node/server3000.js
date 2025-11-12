@@ -4,8 +4,11 @@
 ++-------------------------------++
 
 open the browser on http://localhost:3000/login.html
-
 if the login is successful, you will be redirected to http://localhost:3000/dashboard.html
+
+API Endpoints:
+- GET  /api/test       - test database connection
+- POST /api/login      - user login
 
 */
 

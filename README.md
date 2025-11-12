@@ -67,6 +67,7 @@ SentinelIS
 
 ### Backend
 - Java
+- Node.js
 - Docker
 
 ### Database
@@ -75,8 +76,4 @@ SentinelIS
 
 ## Note
 
-Some of the code and/or documentation in this project may have been generated, improved, or refactored 
-
-with the assistance of AI tools such as GitHub Copilot, ChatGPT, or Claude, based on prompts written by the author. 
-
-All code and associated documentation is licensed under the Non-Commercial Use License (see LICENSE).
+> Some of the code and/or documentation in this project may have been generated, improved, or refactored with the assistance of AI tools such as GitHub Copilot, ChatGPT, or Claude, based on prompts written by the author. All code and associated documentation is licensed under the Non-Commercial Use License (see LICENSE).
