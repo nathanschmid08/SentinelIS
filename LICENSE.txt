@@ -1,0 +1,42 @@
++============================================================+       
+│                 NON-COMMERCIAL USE LICENSE                 │       
++============================================================+         
++ ────────────────────────────────────────────────────────── +
+│ Copyright (c) 2025 Nathan Dion Schmid                      │ 
+│ All rights reserved.                                       │
+│                                                            │
+│ Permission is hereby granted to:                           │ 
+│                                                            │  
+│  • Download, read, and study the software and all          │
+│    associated documentation for understanding purposes.    │
+│  • Modify the software and/or its source code.             │ 
+│                                                            │ 
+│ Usage and Redistribution:                                  │ 
+│                                                            │ 
+│  • The software may be freely used and modified by         │ 
+│    individuals or companies for personal, educational,     │ 
+│    or internal business purposes.                          │ 
+│  • Redistribution of the software, whether in its original │
+│    or modified form, **for monetary compensation, goods,   │
+│    or services is strictly prohibited**.                   │
+│  • Redistribution without compensation, including for      │
+│    private or internal company use, is permitted.          │
+│                                                            │
+│ Definitions:                                               │
+│                                                            │
+│  • "Redistribution" means providing the software, or       │
+│    derivative works, to another party.                     │
+│  • "Internal use" means usage within a company or          │
+│    organization without providing the software or          │
+│    its derivatives to external parties for compensation.   │
+│                                                            │
+│ Disclaimer:                                                │
+│                                                            │
+│  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY        │
+│  OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT        │
+│  LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS     │
+│  FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO      │
+│  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES,  │
+│  OR OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE. │
+│                                                            │
++ ────────────────────────────────────────────────────────── +
