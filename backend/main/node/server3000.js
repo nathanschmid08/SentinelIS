@@ -2,6 +2,11 @@
 ++-------------------------------++
 || ======== SERVER 3000 ======== ||
 ++-------------------------------++
+
+open the browser on http://localhost:3000/login.html
+
+if the login is successful, you will be redirected to http://localhost:3000/dashboard.html
+
 */
 
 const express = require('express');

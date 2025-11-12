@@ -14,6 +14,7 @@ SentinelIS
 │   │   │   ├─ ConnectDB.java 
 │   │   │   └─ TestConnectDB.java
 │   │   └─ node/
+│   │       ├─ .env              
 │   │       └─ server3000.js
 │   └─ pom.xml   
 │
@@ -40,6 +41,8 @@ SentinelIS
 │   ├─ icons/
 │   │   ├─ icon.svg
 │   │   └─ logo.svg
+│   ├─ scripts/
+│   │   └─ login-handler.js
 │   ├─ styles/
 │   │   └─ login.css
 │   ├─ dashboard.html
@@ -48,6 +51,7 @@ SentinelIS
 │
 ├─ node_modules/
 ├─ .gitignore
+├─ LICENSE.txt
 ├─ main.js
 ├─ package-lock.json
 ├─ package.json
