@@ -56,6 +56,7 @@ SentinelIS
 │   │   └─ login-handler.js
 │   ├─ styles/
 │   │   └─ login.css
+│   ├─ admin-cr-user.html
 │   ├─ dashboard.html
 │   ├─ login.html
 │   └─ setup.html
