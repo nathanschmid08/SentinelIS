@@ -6,9 +6,12 @@
 open the browser on http://localhost:3000/login.html
 if the login is successful, you will be redirected to http://localhost:3000/dashboard.html
 
+if you want to setup for a ew company, you will be redirected to http://localhost:3000/setup.html
+
 API Endpoints:
 - GET  /api/test       - test database connection
 - POST /api/login      - user login
+- POST /api/setup      - initial setup for a new company
 
 */
 
@@ -113,6 +116,53 @@ app.post('/api/login', async (req, res) => {
         return res.status(500).json({ success: false, message: 'Server error: ' + err.message });
     }
 });
+
+app.post('/api/setup', async (req, res) => {
+    console.log("POST /api/setup received with body:", req.body);
+    const { companyName, companyDesc, userAbbr, firstname, surname, role, password, passwordRepeat } = req.body || {};
+
+    if (!companyName || !companyDesc || !userAbbr || !firstname || !surname || !role || !password || !passwordRepeat) {
+        return res.status(400).json({ success: false, message: 'Missing fields' });
+    }
+
+    if (password !== passwordRepeat) {
+        return res.status(400).json({ success: false, message: 'Passwords do not match' });
+    }
+
+    try {
+        const conn = await pool.getConnection();
+
+        // 1. Insert Company
+        const [companyResult] = await conn.query(
+            'INSERT INTO COMPANY (COMP_NAME, COMP_DESC) VALUES (?, ?)',
+            [companyName, companyDesc]
+        );
+        const companyId = companyResult.insertId;
+        console.log("Company created with ID:", companyId);
+
+        // 2. Insert User (passwort im Klartext)
+        const [userResult] = await conn.query(
+            'INSERT INTO USERS (COMP_ID, USER_ABBR, USER_SURNAME, USER_FIRST_NAME, USER_ROLE, USER_PASSWORD) VALUES (?, ?, ?, ?, ?, ?)',
+            [companyId, userAbbr, surname, firstname, role, password]
+        );
+        const userId = userResult.insertId;
+        console.log("User created with ID:", userId);
+
+        // 3. Update Company Owner
+        await conn.query(
+            'UPDATE COMPANY SET COMP_OWNER_ID = ? WHERE COMP_ID = ?',
+            [userId, companyId]
+        );
+        console.log("Company owner updated");
+
+        conn.release();
+        return res.json({ success: true, message: 'Setup completed successfully', companyId, userId });
+    } catch (err) {
+        console.error('Setup error:', err);
+        return res.status(500).json({ success: false, message: 'Server error: ' + err.message });
+    }
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
