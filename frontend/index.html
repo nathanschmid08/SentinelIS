@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-/* --- TITLEBAR -------------------------------------- */
-.titlebar {
-    -webkit-app-region: drag;
-    height: 40px;
-    background: #ffffff;
-    border-bottom: 1px solid #d8dce1;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    user-select: none;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* Freie Fläche zum Ziehen */
-.drag-region {
-    -webkit-app-region: drag;
-    flex-grow: 1;
-}
+        .titlebar {
+            -webkit-app-region: drag;
+            height: 40px;
+            background: #1d63ed;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            user-select: none;
+        }
 
-/* --- BUTTONS ---------------------------------------- */
-.window-controls {
-    -webkit-app-region: no-drag;
-    display: flex;
-    gap: 6px;
-}
+        .logo {
+            height: 90px;   
+            width: auto;
+        }
 
-.window-controls button {
-    width: 34px;
-    height: 26px;
-    border: none;
-    border-radius: 6px;
-    background: transparent;
-    color: #3a3a3a;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.15s;
-}
+        .drag-region {
+            -webkit-app-region: drag;
+            flex: 1;
+            height: 100%;
+        }
 
-/* Hover-Styles ähnlich Docker Desktop */
-#min-btn:hover {
-    background: rgba(0, 150, 255, 0.08);
-}
+        .window-controls {
+            -webkit-app-region: no-drag;
+            display: flex;
+            gap: 4px;
+        }
 
-#max-btn:hover {
-    background: rgba(0, 150, 255, 0.12);
-}
+        .window-controls button {
+            width: 36px;
+            height: 28px;
+            border: none;
+            border-radius: 4px;
+            background: transparent;
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-#close-btn:hover {
-    background: rgba(255, 77, 79, 0.15);
-    color: #c62828;
-}
+        .window-controls button:hover {
+            background: rgba(255,255,255,0.2);
+        }
 
-/* Optional: active click */
-.window-controls button:active {
-    transform: scale(0.95);
-}
+        #close-btn:hover {
+            background: #dc2626;
+            color: #fff;
+        }
+
+        .window-controls button:active {
+            transform: scale(0.95);
+        }
     </style>
 </head>
-
 <body>
     <div class="titlebar">
+        <!-- Logo aus SVG-Datei laden -->
+        <img src="icons/icon-white.svg" alt="Logo" class="logo">
+
         <div class="drag-region"></div>
 
         <div class="window-controls">
@@ -76,9 +77,11 @@
         </div>
     </div>
 
+    <iframe 
+        src="http://localhost:3000/login.html" 
+        style="width: 100%; height: calc(100vh - 40px); border: none;">
+    </iframe>
+
     <script src="scripts/renderer.js"></script>
-
-
 </body>
-
 </html>
