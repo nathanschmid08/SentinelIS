@@ -53,6 +53,7 @@ SentinelIS
 │   │   │   ├─ asciitest.sh              
 │   │   │   ├─ eye.txt              
 │   │   │   └─ sentinelis.txt              
+│   │   ├─ icon-white.svg
 │   │   ├─ icon.svg
 │   │   └─ logo.svg
 │   ├─ scripts/
@@ -62,6 +63,7 @@ SentinelIS
 │   │   └─ login.css
 │   ├─ admin-cr-user.html
 │   ├─ dashboard.html
+│   ├─ index.html
 │   ├─ login.html
 │   └─ setup.html
 │
@@ -71,6 +73,7 @@ SentinelIS
 ├─ main.js
 ├─ package-lock.json
 ├─ package.json
+├─ preload.js
 ├─ README.md
 └─ start.sh
 ```
