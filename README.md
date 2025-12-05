@@ -8,13 +8,16 @@ IS = Information Security
 SentinelIS
 ├─ backend/
 │   ├─ main/
-│   │   └─ node/
-│   │       ├─ graphql/
-│   │       │   └─ scheme.graphql
-│   │       ├─ .env
-│   │       ├─ logger.js
-│   │       ├─ server3000.js
-│   │       └─ server4000.js
+│   │   ├─ node/
+│   │   │   ├─ graphql/
+│   │   │   │   └─ scheme.graphql
+│   │   │   ├─ Mimo/
+│   │   │   │   └─ qua.json
+│   │   │   ├─ .env
+│   │   │   ├─ logger.js
+│   │   │   ├─ server3000.js
+│   │   │   └─ server4000.js
+│   │   └─ routes.toml
 │   ├─ testing/
 │   │   ├─ .env
 │   │   ├─ TestConnectGather.py
@@ -57,10 +60,13 @@ SentinelIS
 │   ├─ scripts/
 │   │   ├─ adduser.js
 │   │   ├─ login-handler.js
+│   │   ├─ mimo.js
 │   │   ├─ renderer.js
 │   │   └─ setup-handler.js
 │   ├─ styles/
+│   │   ├─ adduser.css
 │   │   ├─ login.css
+│   │   ├─ mimo.css
 │   │   └─ setup.css
 │   ├─ adduser.html
 │   ├─ dashboard.html
