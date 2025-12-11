@@ -62,6 +62,7 @@ SentinelIS
 │   │   └─ setup-handler.js
 │   ├─ styles/
 │   │   ├─ adduser.css
+│   │   ├─ dashboard.css
 │   │   ├─ login.css
 │   │   ├─ mimo.css
 │   │   └─ setup.css
@@ -84,6 +85,36 @@ SentinelIS
 ├─ preload.js
 ├─ README.md
 └─ start.sh
+```
+
+## Start
+
+### Docker
+
+```cmd
+# to start the entire application
+docker-compose up
+
+# to end the entire application
+# without deleting the data
+docker-compose down
+```
+
+### Node Server
+```
+node server3000.js
+```
+
+### Electron GUI
+```
+npm start
+```
+
+### .NET Livechat
+```
+dotnet clean
+
+dotnet run
 ```
 
 ## Techstack
