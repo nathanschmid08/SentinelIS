@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Live Chat";
+}
+
+<h1>Live Chat mit SignalR</h1>
+
+<div>
+    <label>Benutzername:</label>
+    <input id="userInput" placeholder="Dein Name" />
+</div>
+
+<div style="margin-top:10px;">
+    <label>Nachricht:</label>
+    <input id="messageInput" placeholder="Schreibe etwas..." style="width:60%;" />
+    <button id="sendButton">Senden</button>
+</div>
+
+<hr />
+
+<ul id="messagesList">
+</ul>
+
+<!-- SignalR Client -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chathub")
+        .withAutomaticReconnect()
+        .build();
+
+    connection.on("ReceiveMessage", function (user, message) {
+        const li = document.createElement("li");
+        const strong = document.createElement("strong");
+        strong.textContent = user + ": ";
+        li.appendChild(strong);
+        li.appendChild(document.createTextNode(message));
+        document.getElementById("messagesList").appendChild(li);
+    });
+
+    async function start() {
+        try {
+            await connection.start();
+            console.log("SignalR verbunden");
+        } catch (err) {
+            console.error(err);
+            setTimeout(start, 2000);
+        }
+    }
+
+    document.getElementById("sendButton").addEventListener("click", async function () {
+        const user = document.getElementById("userInput").value || "Anonym";
+        const message = document.getElementById("messageInput").value;
+
+        if (!message) return;
+
+        await connection.invoke("SendMessage", user, message);
+        document.getElementById("messageInput").value = "";
+    });
+
+    document.getElementById("messageInput").addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            document.getElementById("sendButton").click();
+        }
+    });
+
+    start();
+</script>

@@ -7,3 +7,7 @@
 target/
 
 mydb.sqlite
+
+bin/
+
+obj/
